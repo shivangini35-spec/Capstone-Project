@@ -463,6 +463,24 @@ Overall, the project demonstrates how data cleaning, EDA, feature engineering, m
 
 - **Use the model as decision support, not a formal appraisal:** The prediction can help with pricing and negotiation, but unusual or luxury properties may still require professional valuation.
 
+## Buyer Recommendation
+
+The predicted property price can be compared with the seller's asking price to support a buyer's purchase decision.
+
+- If the **asking price is more than 10% below the predicted price**, the property may be considered **undervalued** and could represent a good buying opportunity.
+- If the **asking price is within ±10% of the predicted price**, the property can be considered **fairly priced**.
+- If the **asking price is more than 10% above the predicted price**, the property may be considered **overpriced**, and the buyer should consider negotiating or evaluating other options.
+
+### Decision Rule
+
+**Asking Price < 90% of Predicted Price → Good Deal / Consider Buying**
+
+**Asking Price between 90% and 110% of Predicted Price → Fair Price / Consider Buying based on other factors**
+
+**Asking Price > 110% of Predicted Price → Overpriced / Negotiate or Reconsider**
+
+This recommendation should be used as a decision-support tool along with property condition, location, inspection results, financing, and other real-estate considerations.
+
 ## 📚 Reference
 
 The project is based on the supplied **Capstone Project 1 — Predicting Property Prices in a Specific Location Using Machine Learning** problem statement and the Ames Housing-style property dataset used in the notebook.
